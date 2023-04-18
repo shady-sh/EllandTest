@@ -1,0 +1,7 @@
+name: EllandTest
+version: '${project.version}'
+main: com.elland.dev.ellandtest.EllandTest
+commands:
+  test-mob:
+    aliases: ["testmob", "테스트몹"]
+    permission: Admin
