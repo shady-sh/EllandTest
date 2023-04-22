@@ -39,7 +39,7 @@ public class DpmStartCommand implements CommandExecutor {
         public void run() {
             int dpm = EllandTest.dpmMap.remove(player.getName());
             player.sendMessage(ChatColor.BLUE + "- 1분간 데미지 총량: " + ChatColor.WHITE + dpm);
-            player.sendMessage(ChatColor.YELLOW + "- 1초당 데미지: " + ChatColor.WHITE + dpm / 60.0 + "%");
+            player.sendMessage(ChatColor.YELLOW + "- 1초당 데미지: " + ChatColor.WHITE + dpm / 60.0);
         }
     }
 }

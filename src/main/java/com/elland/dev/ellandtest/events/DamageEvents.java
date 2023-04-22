@@ -17,7 +17,8 @@ public class DamageEvents implements Listener {
             return;
         }
         int dpm = EllandTest.dpmMap.get(player.getName());
-        dpm += event.getFinalDamage() * 2;
+        dpm += event.getFinalDamage();
+        System.out.println("dpm 측정중.. Damage: " + dpm);
         EllandTest.dpmMap.put(player.getName(), dpm);
     }
 }
