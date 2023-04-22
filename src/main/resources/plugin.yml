@@ -5,6 +5,8 @@ commands:
   test-mob:
     aliases: ["testmob", "테스트몹"]
     permission: Admin
+  test-mob-remove:
+    aliases: ["remove-test-mob", "테스트몹제거"]
   dpm-start:
     aliases: ["dpmstart", "dpm측정", "데미지분석"]
     permission: Admin

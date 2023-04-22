@@ -1,6 +1,7 @@
 package com.elland.dev.ellandtest;
 
 import com.elland.dev.ellandtest.cmds.DpmStartCommand;
+import com.elland.dev.ellandtest.cmds.RemoveTestMobCommand;
 import com.elland.dev.ellandtest.cmds.TestMobCommand;
 import com.elland.dev.ellandtest.events.DamageEvents;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -14,6 +15,7 @@ public final class EllandTest extends JavaPlugin {
     public void onEnable() {
         getCommand("dpm-start").setExecutor(new DpmStartCommand());
         getCommand("test-mob").setExecutor(new TestMobCommand());
+        getCommand("test-mob-remove").setExecutor(new RemoveTestMobCommand());
         getServer().getPluginManager().registerEvents(new DamageEvents(), this);
     }
 
