@@ -21,7 +21,7 @@ public class DpmStartCommand implements CommandExecutor {
             sender.sendMessage(ChatColor.RED + "- 이미 dpm을 측정중입니다. 약 1분뒤 다시 시도해주세요.");
             return true;
         }
-        EllandTest.dpmMap.put(player.getName(), 0);
+        EllandTest.dpmMap.put(player.getName(), 0.0);
         sender.sendMessage(ChatColor.WHITE + "- dpm 측정이 시작되었습니다!");
         sender.sendMessage(ChatColor.YELLOW + "- 약 1분뒤 총합 데미지가 계산됩니다.");
         Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(main, new DpmTask(player), 60 * 20L);
@@ -37,9 +37,9 @@ public class DpmStartCommand implements CommandExecutor {
 
         @Override
         public void run() {
-            int dpm = EllandTest.dpmMap.remove(player.getName());
-            player.sendMessage(ChatColor.BLUE + "- 1분간 데미지 총량: " + ChatColor.WHITE + dpm);
-            player.sendMessage(ChatColor.YELLOW + "- 1초당 데미지: " + ChatColor.WHITE + dpm / 60.0);
+            double dpm = EllandTest.dpmMap.remove(player.getName());
+            player.sendMessage(ChatColor.BLUE + "- 1분간 데미지 총량: " + ChatColor.WHITE + String.format("%.1f", dpm));
+            player.sendMessage(ChatColor.YELLOW + "- 1초당 데미지: " + ChatColor.WHITE + String.format("%.1f", dpm / 60.0));
         }
     }
 }

@@ -9,7 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.HashMap;
 
 public final class EllandTest extends JavaPlugin {
-    public static HashMap<String, Integer> dpmMap = new HashMap<>();
+    public static HashMap<String, Double> dpmMap = new HashMap<>();
 
     @Override
     public void onEnable() {

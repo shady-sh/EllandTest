@@ -41,7 +41,7 @@ public class TestMobCommand implements CommandExecutor {
             zombie.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 10000000, 1));
             zombie.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 10000000, 1));
             zombie.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 10000000, 0));
-            zombie.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 10000000, 2));
+            zombie.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 10000000, 0));
             zombie.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 1000000, 0));
             zombie.setCustomName(ChatColor.GREEN + "테스트 몹");
         }
